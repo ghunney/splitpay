@@ -1,0 +1,86 @@
+1. Executive Summary
+SPLITPAY GH is a Buy Now, Pay Later (BNPL) platform designed for the Ghanaian market, targeting the formal employment sector. It allows employees to make purchases and defer payments over time, using their paychecks and retirement savings as collateral. The platform partners with employers to offer this service as a workplace benefit. It includes a mobile application for employees, a dashboard for employers, and a portal for merchants. SPLITPAY GH empowers financial inclusion while managing risk through employer-verified income and automated payroll deductions.
+2. System Overview
+Main Components:
+* Mobile App (Employee Use)
+* Employer Dashboard
+* Merchant Portal
+* Admin Console
+Key Technologies (Suggested):
+* Frontend: Flutter (mobile), React (web dashboards)
+* Backend: Node.js or Django REST Framework
+* Database: PostgreSQL or Firebase
+* Auth: Firebase Auth, Biometric support
+* Payments: MTN MoMo, Vodafone Cash, Bank APIs, GhIPSS
+3. User Personas
+* Employee (User): Seeks flexible financing for goods/services.
+* Employer: Verifies user income and facilitates payroll deductions.
+* Merchant: Lists goods/services with BNPL eligibility.
+* Admin: Oversees platform operations, compliance, and support.
+4. Key Workflows
+4.1 User Onboarding
+1. Download SPLITPAY GH App
+2. Create account with mobile/email and biometric setup
+3. Select employer from list
+4. Enter salary and retirement info
+5. Employer confirms via dashboard
+6. Spending limit calculated and account activated
+4.2 Purchase & Repayment
+1. Browse merchant deals in-app
+2. Select product and choose SPLITPAY GH at checkout
+3. Confirm payment plan (installment terms)
+4. Payment to merchant initiated
+5. Repayment deducted from:
+o Payroll (default)
+o Mobile Money
+o Bank Account
+6. Failed payments incur 25% penalty
+4.3 Employer Payroll Deductions
+1. Monthly payroll sync
+2. View employee repayment statuses
+3. Confirm and deduct pending payments
+4. Upload deduction report
+4.4 Merchant Transactions
+1. Login to portal
+2. Add products/deals
+3. Accept SPLITPAY GH as a payment method
+4. Track completed transactions
+5. Receive settlements within 2–3 business days
+5. Features & Functional Modules
+* Mobile App: Credit dashboard, transaction history, repayment calendar, deal marketplace
+* Employer Dashboard: Employee list, payment status, deduction setup, alerts
+* Merchant Portal: Product listings, payment tracking, settlement view
+* Admin Console: Approvals, reporting, fraud management, platform analytics
+6. System Architecture (High-Level)
+* Mobile Frontend ? REST API Gateway ? Backend Services ? PostgreSQL DB
+* Integrated with: Payroll APIs, Payment Gateways, Notification Services
+7. Mock UI Screens (Descriptions)
+Employee Mobile App:
+* Home Dashboard: Credit limit, next due payment, merchant deals
+* Onboarding Screens: Employer selection, salary input, biometric setup
+* Repayment: Payment history, next due, choose payment method
+* Marketplace: Category browsing, product detail, checkout
+Employer Dashboard:
+* Login Page
+* Employee Overview: Status, limits, dues
+* Deduction Page: Upload monthly deduction file, alerts
+Merchant Portal:
+* Login Page
+* Product Listing: Add/edit deals, categories
+* Transactions: Filter by date/status
+8. Security & Compliance
+* Data encryption in transit and at rest
+* Biometric and 2FA authentication
+* Compliance with Ghana Data Protection Act
+* Transparent terms and conditions for users
+9. Risk Management
+* Employer-verified income prevents fraud
+* Retirement fund details for additional collateral
+* Credit scoring engine based on history, employer rating, debt ratio
+* Blacklisting for defaults
+10. Future Roadmap
+* Expansion to informal sector via mobile verification
+* AI underwriting model
+* Integration with SSNIT, GRA, and BoG APIs
+* Loyalty/reward system for repayment behavior
+
